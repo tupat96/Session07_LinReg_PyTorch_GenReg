@@ -1,0 +1,27 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+    title: "Linear Regression — A Deep Learning Perspective"
+    subtitle: "Generalization - Regulation "
+    author: "Tupac Torres Bartsch"
+    date: today
+
+format:
+  revealjs:
+    slide-number: true
+    progress: true
+    transition: slide
+    transition-speed: fast
+    background-transition: fade
+    fig-align: center
+    navigation-mode: linear
+execute:
+  cache: true     # wichtig!
+  jupyter: python3
+  echo: false
+  warning: false
+  message: false
+mainfont: Arial
+fontsize: 1.05em

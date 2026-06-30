@@ -1,0 +1,226 @@
+[
+  {
+    "objectID": "index.html#training-error",
+    "href": "index.html#training-error",
+    "title": "Training Error Generalization Error",
+    "section": "Training Error",
+    "text": "Training Error\n\n\n\nAverage of the Training Losses: \\[\n{\\large\n  R_{emp}[X, y, f] = \\frac{1}{n} \\sum_{i=1}^{n} \\color{darkred}{l(x^{(i)},y^{(i)},f(x^{(i)}))}\n}%\n\\]\nin our Case losses are \\(L(w,b)\\) : \\[\n{\\large\n  L(w,b) = \\frac{1}{2n}\\sum_{i=1}^{n}(w^\\intercal x^{(i)}+b - y^{(i)})^2\n}%\n\\]"
+  },
+  {
+    "objectID": "index.html#theory-generalization-error",
+    "href": "index.html#theory-generalization-error",
+    "title": "Training Error Generalization Error",
+    "section": "Theory: Generalization Error",
+    "text": "Theory: Generalization Error\n\n\n\n\\[\n{\\large\n    R[p,f] = E(x,y) \\sim p[L(w,b)]\n}%\n\\]\nProbability of the Data given the Truth\n\nis not observable but the Startingpoint of our Rationale\n\nlikelihood of the Model\n\ncan be understood by the losses of our Model\n\nJoint: Generalization Error\n\\[\n{\\Large\n    R[p,f] = \\int \\int \\left[ L(w,b) \\cdot p(x,y) \\right] \\mathrm{d}x \\mathrm{d}y\n}%\n\\]"
+  },
+  {
+    "objectID": "index.html#cross-validation",
+    "href": "index.html#cross-validation",
+    "title": "Training Error Generalization Error",
+    "section": "Cross-Validation",
+    "text": "Cross-Validation\n\n\n\nThe Theory requires, prior knowledge of the True Model\nIf we already new the real True Model,why woul w ebuilkd a estimate?\nIn Practice we use Crossvalidation to Approximate our Generalization Error\n\n\\[\n{\\large\n    E_{CV} = \\frac{1}{k} \\sum_{i = 1}^{k} Ei\n}%\n\\]"
+  },
+  {
+    "objectID": "index.html#example",
+    "href": "index.html#example",
+    "title": "Training Error Generalization Error",
+    "section": "Example:",
+    "text": "Example:\n\n\nWe want to estimate a polynomial:\n\\[\n{\\large\n    Y = \\mathcal{P}_d(X) =  \\sum_{i=0}^{d} x^i w_i\n}%\n\\]\n\n\nOur Candidates are:\n\n\n\n\\[\n    \\hat{Y} = \\mathcal{P}_2(X)    \\\\    \n    \\hat{Y} = \\mathcal{P}_3(X)    \\\\    \n\\]\n\n\n\\[\n    \\hat{Y} = \\mathcal{P}_4(X)    \\\\    \n    \\hat{Y} = \\mathcal{P}_6(X)    \n\\]"
+  },
+  {
+    "objectID": "index.html#our-fit-gives-us-that",
+    "href": "index.html#our-fit-gives-us-that",
+    "title": "Training Error Generalization Error",
+    "section": "Our Fit gives us that",
+    "text": "Our Fit gives us that\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n3\n4\n5\n7\n\n\nw\n \n \n \n \n\n\n\n\n0\n0.26\n0.24\n-0.24\n-0.29\n\n\n1\n-0.48\n-0.3\n-0.05\n-0.18\n\n\n2\n0.21\n0.16\n0.15\n0.17\n\n\n3\n\n-0\n0.06\n-0.04\n\n\n4\n\n\n-0.06\n0.11\n\n\n5\n\n\n\n-0.05\n\n\n6\n\n\n\n-0.04"
+  },
+  {
+    "objectID": "index.html#training-process",
+    "href": "index.html#training-process",
+    "title": "Training Error Generalization Error",
+    "section": "Training Process",
+    "text": "Training Process\nPlot the Loss:"
+  },
+  {
+    "objectID": "index.html#cross-validation-1",
+    "href": "index.html#cross-validation-1",
+    "title": "Training Error Generalization Error",
+    "section": "Cross-Validation",
+    "text": "Cross-Validation\nWe use K-Fold to Validate our model:\n\n\n5-fold cross-validation MSE per degree:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndegree 2: mean MSE=7.3214, std=5.5358\ndegree 3: mean MSE=7.2126, std=5.3935\ndegree 4: mean MSE=7.2335, std=5.4708\ndegree 6: mean MSE=7.2612, std=5.6502"
+  },
+  {
+    "objectID": "index.html#check-your-understanding",
+    "href": "index.html#check-your-understanding",
+    "title": "Training Error Generalization Error",
+    "section": "Check Your Understanding",
+    "text": "Check Your Understanding\n\n\n\n1. IID-Errors\nGive at least five examples where dependent random variables make treating the problem as IID data inadvisable.\n\n\n\n\n2. k-fold\nWhy is the k-fold cross-validation very expensive to compute?\n\n\n\n\n3. Zero Errors\nCan you ever expect to see zero training error? Under which circumstances would you see zero generalization error?\n\n\n\n\n4. Complexity\nThe VC dimension is defined as the maximum number of points that can be classified with arbitrary labels by a function of a class of functions. Why might this not be a good idea for measuring how complex the class of functions is? Hint: consider the magnitude of the functions."
+  },
+  {
+    "objectID": "index.html#part-5-generalization-regulations",
+    "href": "index.html#part-5-generalization-regulations",
+    "title": "Training Error Generalization Error",
+    "section": "Part 5: Generalization, Regulations",
+    "text": "Part 5: Generalization, Regulations\n\n\nWeigt Decay\n\n\nRige Penalty in th Deep learning Context"
+  },
+  {
+    "objectID": "index.html#weight-decay",
+    "href": "index.html#weight-decay",
+    "title": "Training Error Generalization Error",
+    "section": "Weight Decay",
+    "text": "Weight Decay\n\n\nTo mitigate complexity we feed the Optimizer also a penalty for Magintude of weights:\nThe Ridge Penalty\n\\[\n{\\large\n  min[L(w,b) + \\color{darkred}{\\frac{\\lambda}{2} w^2}]\n}%\n\\]\nWe embed the penalty in the Minibatch optimization process:\n\\[\n{\\large\nw \\leftarrow (1-\\eta \\color{darkred}{\\lambda}) \\color{darkred}{w} - \\frac{\\eta}{|\\mathcal{B}|} \\sum_{i \\in \\mathcal{B}} x{(i)} (w^\\intercal w{(i)} + b - y^{(i)})\n}%\n\\]\nRidge does not only Reduce complexity, it also allows complexer models to more controlled results.\n\nTypical Ranges: \\(10^3 &gt; \\lambda &gt; 10^-3\\)"
+  },
+  {
+    "objectID": "index.html#in-our-example",
+    "href": "index.html#in-our-example",
+    "title": "Training Error Generalization Error",
+    "section": "In Our Example",
+    "text": "In Our Example"
+  },
+  {
+    "objectID": "index.html#fitted-lines-in-our-example",
+    "href": "index.html#fitted-lines-in-our-example",
+    "title": "Training Error Generalization Error",
+    "section": "Fitted Lines in our Example:",
+    "text": "Fitted Lines in our Example:\n\n\n\n\n\n\n\n\n\n\n\n\nK-Fold\n\n\n\n\n\n\n\nλ\nMSE\n\n\n\n\n0.001000\n7.255351\n\n\n0.010000\n7.336678\n\n\n0.100000\n7.246400\n\n\n0.200000\n7.336316\n\n\n\n\n\n\n\n\n\n\n\n\n\n0.001000\n7.305380\n\n\n0.010000\n7.359933\n\n\n0.100000\n7.277649\n\n\n0.200000\n7.272549\n\n\n\n\n\n\n\n\n\n\n\n\n\n0.001000\n7.305380\n\n\n0.010000\n7.359933\n\n\n0.100000\n7.277649\n\n\n0.200000\n7.272549\n\n\n\n\n\n\n\n\n\n\n\n\n\n0.001000\n7.503478\n\n\n0.010000\n7.333072\n\n\n0.100000\n7.204915\n\n\n0.200000\n7.335654"
+  },
+  {
+    "objectID": "index.html#check-your-understanding-1",
+    "href": "index.html#check-your-understanding-1",
+    "title": "Training Error Generalization Error",
+    "section": "Check Your Understanding",
+    "text": "Check Your Understanding\n\n\n\n1. Optimal Set?\nUse a validation set to find the optimal value of . Is it really the optimal value? Does this matter?\n\n\n\n\n2. The 1/2 factor\nReview the relationship between training error and generalization error. In addition to weight decay, increased training, and the use of a model of suitable complexity, what other ways might help us deal with overfitting?\n\n\n\n\n3. Forgetting zero_grad()\nWe know that . Can you find a similar equation for matrices\n\n\n\n\n4. One-line swap\nWhat would the update equations look like if instead of we used as our penalty of choice ( regularization)?"
+  },
+  {
+    "objectID": "index.html#which-one-is-it",
+    "href": "index.html#which-one-is-it",
+    "title": "Training Error Generalization Error",
+    "section": "Which one is it?",
+    "text": "Which one is it?\nCandidates\n\\[\n{\\large\n    \\hat{y} = \\mathcal{P}_2(X),\n}%    \\\\    \n{\\large\n    \\hat{y} = \\mathcal{P}_3(X),\n}%    \\\\    \n{\\large\n    \\hat{y} = \\mathcal{P}_4(X),\n}%    \\\\    \n{\\large\n    \\hat{y} = \\mathcal{P}_6(X),     \n}%\n\\]\nTrue Model\n\\[\n{\\Large\n    y =  - 1.5 + \\color{darkred}{0.4} x + \\color{darkred}{0.2} x^\\color{darkred}{2} - \\color{darkred}{0.199} x^\\color{darkred}{3} + \\color{darkred}{0.028} x^\\color{darkred}{4}     \\\\     \n}%\n\\]\nThough In Practice\nOther models can serve a better Purpose than the truly specified one \\[\n{\\large\n    \\hat{y}_6 = \\mathcal{P}_6(X) \\succ \\hat{y}_4 = \\mathcal{P}_4(X)    \\\\    \n}%\n\\]"
+  },
+  {
+    "objectID": "index.html#section",
+    "href": "index.html#section",
+    "title": "Training Error Generalization Error",
+    "section": "",
+    "text": "Takeaway\n\n\nPut it in your Bag"
+  },
+  {
+    "objectID": "index.html#takeaway",
+    "href": "index.html#takeaway",
+    "title": "Training Error Generalization Error",
+    "section": "Takeaway",
+    "text": "Takeaway\n\nTraining error Refers to in Sample Data, Generalization Error to all possible observable Data\nThe True generalization error is not Observable , we Approximate it wire Crossvalidation\nTo acheive well General Performance we aim to mitigate Model Complexity\nIn Deep learning we Approach this by Weight Decay\nWe used the Ridge - Penalty for weight decay in our linear Regression\nThe Bets model also depends on your Objective."
+  },
+  {
+    "objectID": "GE.html#training-error",
+    "href": "GE.html#training-error",
+    "title": "Training Error Generalization Error",
+    "section": "Training Error",
+    "text": "Training Error\n\n\n\nAverage of the Training Losses: \\[\n{\\large\n  R_{emp}[X, y, f] = \\frac{1}{n} \\sum_{i=1}^{n} \\color{darkred}{l(x^{(i)},y^{(i)},f(x^{(i)}))}\n}%\n\\]\nin our Case losses are \\(L(w,b)\\) : \\[\n{\\large\n  L(w,b) = \\frac{1}{2n}\\sum_{i=1}^{n}(w^\\intercal x^{(i)}+b - y^{(i)})^2\n}%\n\\]"
+  },
+  {
+    "objectID": "GE.html#theory-generalization-error",
+    "href": "GE.html#theory-generalization-error",
+    "title": "Training Error Generalization Error",
+    "section": "Theory: Generalization Error",
+    "text": "Theory: Generalization Error\n\n\n\n\\[\n{\\large\n    R[p,f] = E(x,y) \\sim p[L(w,b)]\n}%\n\\]\nProbability of the Data given the Truth\n\nis not observable but the Startingpoint of our Rationale\n\nlikelihood of the Model\n\ncan be understood by the losses of our Model\n\nJoint: Generalization Error\n\\[\n{\\Large\n    R[p,f] = \\int \\int \\left[ L(w,b) \\cdot p(x,y) \\right] \\mathrm{d}x \\mathrm{d}y\n}%\n\\]"
+  },
+  {
+    "objectID": "GE.html#cross-validation",
+    "href": "GE.html#cross-validation",
+    "title": "Training Error Generalization Error",
+    "section": "Cross-Validation",
+    "text": "Cross-Validation\n\n\n\nThe Theory requires, prior knowledge of the True Model\nIf we already new the real True Model,why woul w ebuilkd a estimate?\nIn Practice we use Crossvalidation to Approximate our Generalization Error\n\n\\[\n{\\large\n    E_{CV} = \\frac{1}{k} \\sum_{i = 1}^{k} Ei\n}%\n\\]"
+  },
+  {
+    "objectID": "GE.html#example",
+    "href": "GE.html#example",
+    "title": "Training Error Generalization Error",
+    "section": "Example:",
+    "text": "Example:\n\n\nWe want to estimate a polynomial:\n\\[\n{\\large\n    Y = \\mathcal{P}_d(X) =  \\sum_{i=0}^{d} x^i w_i\n}%\n\\]\n\n\nOur Candidates are:\n\n\n\n\\[\n    \\hat{Y} = \\mathcal{P}_2(X)    \\\\    \n    \\hat{Y} = \\mathcal{P}_3(X)    \\\\    \n\\]\n\n\n\\[\n    \\hat{Y} = \\mathcal{P}_4(X)    \\\\    \n    \\hat{Y} = \\mathcal{P}_6(X)    \n\\]"
+  },
+  {
+    "objectID": "GE.html#our-fit-gives-us-that",
+    "href": "GE.html#our-fit-gives-us-that",
+    "title": "Training Error Generalization Error",
+    "section": "Our Fit gives us that",
+    "text": "Our Fit gives us that\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n3\n4\n5\n7\n\n\nw\n \n \n \n \n\n\n\n\n0\n0.26\n0.24\n-0.24\n-0.29\n\n\n1\n-0.48\n-0.3\n-0.05\n-0.18\n\n\n2\n0.21\n0.16\n0.15\n0.17\n\n\n3\n\n-0\n0.06\n-0.04\n\n\n4\n\n\n-0.06\n0.11\n\n\n5\n\n\n\n-0.05\n\n\n6\n\n\n\n-0.04"
+  },
+  {
+    "objectID": "GE.html#training-process",
+    "href": "GE.html#training-process",
+    "title": "Training Error Generalization Error",
+    "section": "Training Process",
+    "text": "Training Process\nPlot the Loss:"
+  },
+  {
+    "objectID": "GE.html#cross-validation-1",
+    "href": "GE.html#cross-validation-1",
+    "title": "Training Error Generalization Error",
+    "section": "Cross-Validation",
+    "text": "Cross-Validation\nWe use K-Fold to Validate our model:\n\n\n5-fold cross-validation MSE per degree:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndegree 2: mean MSE=7.3214, std=5.5358\ndegree 3: mean MSE=7.2126, std=5.3935\ndegree 4: mean MSE=7.2335, std=5.4708\ndegree 6: mean MSE=7.2612, std=5.6502"
+  },
+  {
+    "objectID": "GE.html#check-your-understanding",
+    "href": "GE.html#check-your-understanding",
+    "title": "Training Error Generalization Error",
+    "section": "Check Your Understanding",
+    "text": "Check Your Understanding\n\n\n\n1. IID-Errors\nGive at least five examples where dependent random variables make treating the problem as IID data inadvisable.\n\n\n\n\n2. k-fold\nWhy is the k-fold cross-validation very expensive to compute?\n\n\n\n\n3. Zero Errors\nCan you ever expect to see zero training error? Under which circumstances would you see zero generalization error?\n\n\n\n\n4. Complexity\nThe VC dimension is defined as the maximum number of points that can be classified with arbitrary labels by a function of a class of functions. Why might this not be a good idea for measuring how complex the class of functions is? Hint: consider the magnitude of the functions."
+  },
+  {
+    "objectID": "GE.html#part-5-generalization-regulations",
+    "href": "GE.html#part-5-generalization-regulations",
+    "title": "Training Error Generalization Error",
+    "section": "Part 5: Generalization, Regulations",
+    "text": "Part 5: Generalization, Regulations\n\n\nWeigt Decay\n\n\nRige Penalty in th Deep learning Context"
+  },
+  {
+    "objectID": "GE.html#weight-decay",
+    "href": "GE.html#weight-decay",
+    "title": "Training Error Generalization Error",
+    "section": "Weight Decay",
+    "text": "Weight Decay\n\n\nTo mitigate complexity we feed the Optimizer also a penalty for Magintude of weights:\nThe Ridge Penalty\n\\[\n{\\large\n  min[L(w,b) + \\color{darkred}{\\frac{\\lambda}{2} w^2}]\n}%\n\\]\nWe embed the penalty in the Minibatch optimization process:\n\\[\n{\\large\nw \\leftarrow (1-\\eta \\color{darkred}{\\lambda}) \\color{darkred}{w} - \\frac{\\eta}{|\\mathcal{B}|} \\sum_{i \\in \\mathcal{B}} x{(i)} (w^\\intercal w{(i)} + b - y^{(i)})\n}%\n\\]\nRidge does not only Reduce complexity, it also allows complexer models to more controlled results.\n\nTypical Ranges: \\(10^3 &gt; \\lambda &gt; 10^-3\\)"
+  },
+  {
+    "objectID": "GE.html#in-our-example",
+    "href": "GE.html#in-our-example",
+    "title": "Training Error Generalization Error",
+    "section": "In Our Example",
+    "text": "In Our Example"
+  },
+  {
+    "objectID": "GE.html#fitted-lines-in-our-example",
+    "href": "GE.html#fitted-lines-in-our-example",
+    "title": "Training Error Generalization Error",
+    "section": "Fitted Lines in our Example:",
+    "text": "Fitted Lines in our Example:\n\n\n\n\n\n\n\n\n\n\n\n\nK-Fold\n\n\n\n\n\n\n\nλ\nMSE\n\n\n\n\n0.001000\n7.255351\n\n\n0.010000\n7.336678\n\n\n0.100000\n7.246400\n\n\n0.200000\n7.336316\n\n\n\n\n\n\n\n\n\n\n\n\n\n0.001000\n7.305380\n\n\n0.010000\n7.359933\n\n\n0.100000\n7.277649\n\n\n0.200000\n7.272549\n\n\n\n\n\n\n\n\n\n\n\n\n\n0.001000\n7.305380\n\n\n0.010000\n7.359933\n\n\n0.100000\n7.277649\n\n\n0.200000\n7.272549\n\n\n\n\n\n\n\n\n\n\n\n\n\n0.001000\n7.503478\n\n\n0.010000\n7.333072\n\n\n0.100000\n7.204915\n\n\n0.200000\n7.335654"
+  },
+  {
+    "objectID": "GE.html#check-your-understanding-1",
+    "href": "GE.html#check-your-understanding-1",
+    "title": "Training Error Generalization Error",
+    "section": "Check Your Understanding",
+    "text": "Check Your Understanding\n\n\n\n1. Optimal Set?\nUse a validation set to find the optimal value of . Is it really the optimal value? Does this matter?\n\n\n\n\n2. The 1/2 factor\nReview the relationship between training error and generalization error. In addition to weight decay, increased training, and the use of a model of suitable complexity, what other ways might help us deal with overfitting?\n\n\n\n\n3. Forgetting zero_grad()\nWe know that . Can you find a similar equation for matrices\n\n\n\n\n4. One-line swap\nWhat would the update equations look like if instead of we used as our penalty of choice ( regularization)?"
+  },
+  {
+    "objectID": "GE.html#which-one-is-it",
+    "href": "GE.html#which-one-is-it",
+    "title": "Training Error Generalization Error",
+    "section": "Which one is it?",
+    "text": "Which one is it?\nCandidates\n\\[\n{\\large\n    \\hat{y} = \\mathcal{P}_2(X),\n}%    \\\\    \n{\\large\n    \\hat{y} = \\mathcal{P}_3(X),\n}%    \\\\    \n{\\large\n    \\hat{y} = \\mathcal{P}_4(X),\n}%    \\\\    \n{\\large\n    \\hat{y} = \\mathcal{P}_6(X),     \n}%\n\\]\nTrue Model\n\\[\n{\\Large\n    y =  - 1.5 + \\color{darkred}{0.4} x + \\color{darkred}{0.2} x^\\color{darkred}{2} - \\color{darkred}{0.199} x^\\color{darkred}{3} + \\color{darkred}{0.028} x^\\color{darkred}{4}     \\\\     \n}%\n\\]\nThough In Practice\nOther models can serve a better Purpose than the truly specified one \\[\n{\\large\n    \\hat{y}_6 = \\mathcal{P}_6(X) \\succ \\hat{y}_4 = \\mathcal{P}_4(X)    \\\\    \n}%\n\\]"
+  },
+  {
+    "objectID": "GE.html#section",
+    "href": "GE.html#section",
+    "title": "Training Error Generalization Error",
+    "section": "",
+    "text": "Takeaway\n\n\nPut it in your Bag"
+  },
+  {
+    "objectID": "GE.html#takeaway",
+    "href": "GE.html#takeaway",
+    "title": "Training Error Generalization Error",
+    "section": "Takeaway",
+    "text": "Takeaway\n\nTraining error Refers to in Sample Data, Generalization Error to all possible observable Data\nThe True generalization error is not Observable , we Approximate it wire Crossvalidation\nTo acheive well General Performance we aim to mitigate Model Complexity\nIn Deep learning we Approach this by Weight Decay\nWe used the Ridge - Penalty for weight decay in our linear Regression\nThe Bets model also depends on your Objective."
+  }
+]

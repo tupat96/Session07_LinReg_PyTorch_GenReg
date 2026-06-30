@@ -5,6 +5,9 @@ project:
 
 website:
   title: "Linear Regression — A Deep Learning Perspective"
+  subtitle: "Generalization - Regulation"
+  author: "Tupac Torres Bartsch"
+  date: today
 
 format:
   revealjs:

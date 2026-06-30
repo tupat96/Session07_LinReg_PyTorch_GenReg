@@ -3,10 +3,7 @@ project:
   output-dir: docs
 
 website:
-    title: "Linear Regression — A Deep Learning Perspective"
-    subtitle: "Generalization - Regulation "
-    author: "Tupac Torres Bartsch"
-    date: today
+  title: "Linear Regression — A Deep Learning Perspective"
 
 format:
   revealjs:
@@ -17,11 +14,13 @@ format:
     background-transition: fade
     fig-align: center
     navigation-mode: linear
+
 execute:
-  cache: true     # wichtig!
+  cache: true
   jupyter: python3
   echo: false
   warning: false
   message: false
+
 mainfont: Arial
 fontsize: 1.05em
